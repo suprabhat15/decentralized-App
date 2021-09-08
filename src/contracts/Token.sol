@@ -4,14 +4,14 @@ pragma solidity >=0.6.0 <0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract Token is ERC20 {
-  //add minter variable
+  //added minter variable
   address public minter;
 
-  //add minter changed event
+  //added minter changed event
   event MinterChanged(address indexed from, address to);
 
   constructor() public payable ERC20("Decentralized Bank Currency", "DBC") {
-    //asign initial minter
+    //assigned initial minter
     minter = msg.sender;
   }
 
